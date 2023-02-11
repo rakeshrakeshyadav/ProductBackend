@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 
-app.get("/products", async (req, res) => {
+app.get("/product", async (req, res) => {
   try {
     const data = await GradeModel.find();
     return res.send(data);
@@ -21,7 +21,7 @@ app.get("/products", async (req, res) => {
     return res.send(error.message);
   }
 });
-app.get("/products", async (req, res) => {
+app.get("/product", async (req, res) => {
   try {
     const data = await ProductModel.find();
     return res.send(data);
